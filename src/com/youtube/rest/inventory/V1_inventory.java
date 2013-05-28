@@ -21,8 +21,7 @@ public class V1_inventory {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String returnAllPcParts() throws Exception {
-	//public Response returnAllPcParts() throws Exception {
+	public Response returnAllPcParts() throws Exception {
 
 		PreparedStatement query = null;
 		Connection conn = null;
@@ -56,8 +55,7 @@ public class V1_inventory {
 		finally {
 			 if (conn != null) conn.close();
 		}
-		return  returnString;
-		//return rb;
+		return rb;
 	}
 
 }
